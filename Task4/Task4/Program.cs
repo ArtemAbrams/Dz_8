@@ -2,8 +2,8 @@
 Console.WriteLine("");
 interface IPrice
 {
-    void ApplyDiscount(String discount);
-    void ApplyPromocode(String promocode);
+    void ApplyDiscount(string discount);
+    void ApplyPromocode(string promocode);
     void SetPrice(double price);
 }
 
@@ -17,7 +17,7 @@ interface IAspect
 class Book:IPrice
 {
     private double price;
-    public void ApplyDiscount(String discount)
+    public void ApplyDiscount(string discount)
     {
         Console.WriteLine("The book has discount " + discount);
     }
@@ -26,13 +26,13 @@ class Book:IPrice
         this.price = price;
     }
 
-    public void ApplyPromocode(String promocode)
+    public void ApplyPromocode(string promocode)
     {
         Console.WriteLine("The book has promocode " + promocode);
     }
 }
 
-class Clouther:IAspect, IPrice
+class Clother:IAspect, IPrice
 {
     private double price;
     private byte color;
@@ -46,18 +46,18 @@ class Clouther:IAspect, IPrice
     {
         this.color = color;
     }
-    public void ApplyDiscount(String discount)
+    public void ApplyDiscount(string discount)
     {
-        Console.WriteLine("The book has discount " + discount);
+        Console.WriteLine("The clother has discount " + discount);
     }
     public void SetPrice(double price)
     {
         this.price = price;
     }
 
-    public void ApplyPromocode(String promocode)
+    public void ApplyPromocode(string promocode)
     {
-        Console.WriteLine("The book has promocode " + promocode);
+        Console.WriteLine("The clother has promocode " + promocode);
     }
     
 }

@@ -1,6 +1,4 @@
-﻿
-
-// Dependency Inversion Principle цей солід поруено
+﻿// Dependency Inversion Principle цей солід поруено
 interface ILog
 {
     void Print(Email email);

@@ -13,6 +13,10 @@ interface IOrder
     public void AddItem(Item item);
     public void DeleteItem(Item item);
 }
+interface IShow
+{
+    public void ShowOrder();
+}
 
 interface IRepository
 {
@@ -27,10 +31,6 @@ interface IPrint
     public void PrintOrder();
 }
 
-interface IShow
-{
-    
-}
 class Order: IOrder
 {
     private List<Item> itemList;
@@ -65,7 +65,7 @@ class OrderPrint: IPrint
     public void PrintOrder() {/*...*/}
 }
 
-class OrderShow
+class OrderShow: IShow
 {
     public void ShowOrder() {/*...*/}
 }
