@@ -1,4 +1,5 @@
 ﻿using System;
+// Liskov Substitution Principle порушено
 class Program
 {
     static void Main(string[] args)
